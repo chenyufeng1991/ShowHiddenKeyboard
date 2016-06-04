@@ -14,6 +14,8 @@
 		716E32AC1D026D7F00276EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E32AB1D026D7F00276EC7 /* Assets.xcassets */; };
 		716E32AF1D026D7F00276EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716E32AD1D026D7F00276EC7 /* LaunchScreen.storyboard */; };
 		71C2A7531D02CD9D00C56B3A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C2A7521D02CD9D00C56B3A /* CustomCollectionViewCell.m */; };
+		71C2A7571D02DEAE00C56B3A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C2A7551D02DEAE00C56B3A /* LoginViewController.m */; };
+		71C2A7581D02DEAE00C56B3A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C2A7561D02DEAE00C56B3A /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		716E32B01D026D7F00276EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C2A7511D02CD9D00C56B3A /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		71C2A7521D02CD9D00C56B3A /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		71C2A7541D02DEAE00C56B3A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		71C2A7551D02DEAE00C56B3A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		71C2A7561D02DEAE00C56B3A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BC14539D2D9E77F682C45382 /* Pods-ShowHiddenKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowHiddenKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowHiddenKeyboard/Pods-ShowHiddenKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		F201DFFF9A352312E12BD7B7 /* libPods-ShowHiddenKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowHiddenKeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +93,9 @@
 				716E32A31D026D7F00276EC7 /* AppDelegate.m */,
 				716E32A51D026D7F00276EC7 /* MainViewController.h */,
 				716E32A61D026D7F00276EC7 /* MainViewController.m */,
+				71C2A7541D02DEAE00C56B3A /* LoginViewController.h */,
+				71C2A7551D02DEAE00C56B3A /* LoginViewController.m */,
+				71C2A7561D02DEAE00C56B3A /* LoginViewController.xib */,
 				716E32AB1D026D7F00276EC7 /* Assets.xcassets */,
 				716E32AD1D026D7F00276EC7 /* LaunchScreen.storyboard */,
 				716E32B01D026D7F00276EC7 /* Info.plist */,
@@ -175,6 +183,7 @@
 			files = (
 				716E32AF1D026D7F00276EC7 /* LaunchScreen.storyboard in Resources */,
 				716E32AC1D026D7F00276EC7 /* Assets.xcassets in Resources */,
+				71C2A7581D02DEAE00C56B3A /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +246,7 @@
 				716E32A41D026D7F00276EC7 /* AppDelegate.m in Sources */,
 				716E32A11D026D7F00276EC7 /* main.m in Sources */,
 				71C2A7531D02CD9D00C56B3A /* CustomCollectionViewCell.m in Sources */,
+				71C2A7571D02DEAE00C56B3A /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

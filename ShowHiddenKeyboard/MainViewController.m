@@ -36,6 +36,34 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardShowing)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardHidden)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+}
+
 - (void)configUI
 {
     // 包容整个界面的容器View
@@ -44,7 +72,7 @@
     tureFame.origin.y = 64;// 获取剔除导航栏后的真正y位置
 
     self.contentView = [[UIView alloc] init];
-    self.contentView.backgroundColor = [UIColor grayColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
     self.contentView.frame = tureFame;
     self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.contentView];
@@ -63,8 +91,8 @@
 
     // 文本输入框
     self.inputField = [[UITextField alloc] init];
-    self.inputField.placeholder = @"可以输入文字";
-    self.inputField.backgroundColor = [UIColor whiteColor];
+    self.inputField.text = @"请输入";
+    self.inputField.backgroundColor = [UIColor colorWithRed:0.507 green:1.000 blue:0.520 alpha:1.000];
     [self.contentView addSubview:self.inputField];
     [self.inputField mas_makeConstraints:^(MASConstraintMaker *make) {
 
@@ -127,6 +155,26 @@
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     return UIEdgeInsetsMake(0, 5, 0, 5);
+}
+
+#pragma mark - 键盘处理事件
+- (void)keyboardShowing
+{
+    CGRect frame = self.contentView.frame;
+    frame.origin.y = self.contentView.frame.origin.y - 50;
+    self.contentView.frame = frame;
+}
+
+- (void)keyboardHidden
+{
+    CGRect frame = self.contentView.frame;
+    frame.origin.y = self.contentView.frame.origin.y + 50;
+    self.contentView.frame = frame;
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.inputField endEditing:YES];
 }
 
 @end

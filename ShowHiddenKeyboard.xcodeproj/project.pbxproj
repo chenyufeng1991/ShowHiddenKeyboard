@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		716E32A11D026D7F00276EC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 716E32A01D026D7F00276EC7 /* main.m */; };
+		716E32A41D026D7F00276EC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 716E32A31D026D7F00276EC7 /* AppDelegate.m */; };
+		716E32A71D026D7F00276EC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716E32A61D026D7F00276EC7 /* ViewController.m */; };
+		716E32AA1D026D7F00276EC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716E32A81D026D7F00276EC7 /* Main.storyboard */; };
+		716E32AC1D026D7F00276EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E32AB1D026D7F00276EC7 /* Assets.xcassets */; };
+		716E32AF1D026D7F00276EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716E32AD1D026D7F00276EC7 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		716E329C1D026D7F00276EC7 /* ShowHiddenKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowHiddenKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		716E32A01D026D7F00276EC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		716E32A21D026D7F00276EC7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		716E32A31D026D7F00276EC7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		716E32A51D026D7F00276EC7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		716E32A61D026D7F00276EC7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		716E32A91D026D7F00276EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		716E32AB1D026D7F00276EC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		716E32AE1D026D7F00276EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		716E32B01D026D7F00276EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		716E32991D026D7F00276EC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		716E32931D026D7F00276EC7 = {
+			isa = PBXGroup;
+			children = (
+				716E329E1D026D7F00276EC7 /* ShowHiddenKeyboard */,
+				716E329D1D026D7F00276EC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		716E329D1D026D7F00276EC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				716E329C1D026D7F00276EC7 /* ShowHiddenKeyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		716E329E1D026D7F00276EC7 /* ShowHiddenKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				716E32A21D026D7F00276EC7 /* AppDelegate.h */,
+				716E32A31D026D7F00276EC7 /* AppDelegate.m */,
+				716E32A51D026D7F00276EC7 /* ViewController.h */,
+				716E32A61D026D7F00276EC7 /* ViewController.m */,
+				716E32A81D026D7F00276EC7 /* Main.storyboard */,
+				716E32AB1D026D7F00276EC7 /* Assets.xcassets */,
+				716E32AD1D026D7F00276EC7 /* LaunchScreen.storyboard */,
+				716E32B01D026D7F00276EC7 /* Info.plist */,
+				716E329F1D026D7F00276EC7 /* Supporting Files */,
+			);
+			path = ShowHiddenKeyboard;
+			sourceTree = "<group>";
+		};
+		716E329F1D026D7F00276EC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				716E32A01D026D7F00276EC7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		716E329B1D026D7F00276EC7 /* ShowHiddenKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 716E32B31D026D7F00276EC7 /* Build configuration list for PBXNativeTarget "ShowHiddenKeyboard" */;
+			buildPhases = (
+				716E32981D026D7F00276EC7 /* Sources */,
+				716E32991D026D7F00276EC7 /* Frameworks */,
+				716E329A1D026D7F00276EC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShowHiddenKeyboard;
+			productName = ShowHiddenKeyboard;
+			productReference = 716E329C1D026D7F00276EC7 /* ShowHiddenKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		716E32941D026D7F00276EC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = chenyufengweb;
+				TargetAttributes = {
+					716E329B1D026D7F00276EC7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 716E32971D026D7F00276EC7 /* Build configuration list for PBXProject "ShowHiddenKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 716E32931D026D7F00276EC7;
+			productRefGroup = 716E329D1D026D7F00276EC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				716E329B1D026D7F00276EC7 /* ShowHiddenKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		716E329A1D026D7F00276EC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716E32AF1D026D7F00276EC7 /* LaunchScreen.storyboard in Resources */,
+				716E32AC1D026D7F00276EC7 /* Assets.xcassets in Resources */,
+				716E32AA1D026D7F00276EC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		716E32981D026D7F00276EC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716E32A71D026D7F00276EC7 /* ViewController.m in Sources */,
+				716E32A41D026D7F00276EC7 /* AppDelegate.m in Sources */,
+				716E32A11D026D7F00276EC7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		716E32A81D026D7F00276EC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				716E32A91D026D7F00276EC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		716E32AD1D026D7F00276EC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				716E32AE1D026D7F00276EC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		716E32B11D026D7F00276EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		716E32B21D026D7F00276EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		716E32B41D026D7F00276EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShowHiddenKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenyufengweb.ShowHiddenKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		716E32B51D026D7F00276EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShowHiddenKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenyufengweb.ShowHiddenKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		716E32971D026D7F00276EC7 /* Build configuration list for PBXProject "ShowHiddenKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				716E32B11D026D7F00276EC7 /* Debug */,
+				716E32B21D026D7F00276EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		716E32B31D026D7F00276EC7 /* Build configuration list for PBXNativeTarget "ShowHiddenKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				716E32B41D026D7F00276EC7 /* Debug */,
+				716E32B51D026D7F00276EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 716E32941D026D7F00276EC7 /* Project object */;
+}

@@ -128,7 +128,7 @@ NS_ENUM(NSInteger,KeyBoardState){
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(hideKeyboard:)];
-    tap.cancelsTouchesInView = NO;
+//    tap.cancelsTouchesInView = NO;
     [self.collectionView addGestureRecognizer:tap];
 }
 
@@ -148,6 +148,9 @@ NS_ENUM(NSInteger,KeyBoardState){
 {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
     cell.imageView.image = self.collArr[indexPath.row];
+    [cell.button addTarget:self
+                    action:@selector(closeButton:)
+          forControlEvents:UIControlEventTouchUpInside];
 
 
     return cell;
@@ -190,12 +193,21 @@ NS_ENUM(NSInteger,KeyBoardState){
 {
     CGPoint pointTouch = [sender locationInView:self.collectionView];
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pointTouch];
-    if (indexPath != nil && KeyBoardState == KeyboardShowing)
+    if (indexPath != nil)
     {
         [self collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
     }
 
     [self.inputField endEditing:YES];// 这里会阻断响应链
+}
+
+- (void)closeButton:(id)sender
+{
+    CustomCollectionViewCell *cell = (CustomCollectionViewCell *)[sender superview];
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    NSLog(@"关闭按钮被点击：%ld",(long)indexPath.row);
+
+    [self hideKeyboard:nil];
 }
 
 

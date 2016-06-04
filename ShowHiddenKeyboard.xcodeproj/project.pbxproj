@@ -13,6 +13,7 @@
 		716E32A71D026D7F00276EC7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716E32A61D026D7F00276EC7 /* MainViewController.m */; };
 		716E32AC1D026D7F00276EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716E32AB1D026D7F00276EC7 /* Assets.xcassets */; };
 		716E32AF1D026D7F00276EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716E32AD1D026D7F00276EC7 /* LaunchScreen.storyboard */; };
+		71C2A7531D02CD9D00C56B3A /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C2A7521D02CD9D00C56B3A /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		716E32AB1D026D7F00276EC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716E32AE1D026D7F00276EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716E32B01D026D7F00276EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C2A7511D02CD9D00C56B3A /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		71C2A7521D02CD9D00C56B3A /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		BC14539D2D9E77F682C45382 /* Pods-ShowHiddenKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowHiddenKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowHiddenKeyboard/Pods-ShowHiddenKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		F201DFFF9A352312E12BD7B7 /* libPods-ShowHiddenKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowHiddenKeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +83,7 @@
 		716E329E1D026D7F00276EC7 /* ShowHiddenKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				71C2A7501D02CD6A00C56B3A /* CollectionView */,
 				716E32A21D026D7F00276EC7 /* AppDelegate.h */,
 				716E32A31D026D7F00276EC7 /* AppDelegate.m */,
 				716E32A51D026D7F00276EC7 /* MainViewController.h */,
@@ -98,6 +102,15 @@
 				716E32A01D026D7F00276EC7 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71C2A7501D02CD6A00C56B3A /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				71C2A7511D02CD9D00C56B3A /* CustomCollectionViewCell.h */,
+				71C2A7521D02CD9D00C56B3A /* CustomCollectionViewCell.m */,
+			);
+			name = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +236,7 @@
 				716E32A71D026D7F00276EC7 /* MainViewController.m in Sources */,
 				716E32A41D026D7F00276EC7 /* AppDelegate.m in Sources */,
 				716E32A11D026D7F00276EC7 /* main.m in Sources */,
+				71C2A7531D02CD9D00C56B3A /* CustomCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

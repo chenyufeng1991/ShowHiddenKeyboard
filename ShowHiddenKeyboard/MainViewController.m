@@ -13,6 +13,12 @@
 //定义宏，用于block
 #define WeakSelf(weakSelf) __weak __typeof(&*self)weakSelf = self;
 
+NS_ENUM(NSInteger,KeyBoardState){
+
+    KeyboardHidden = 0,
+    KeyboardShowing
+};
+
 @interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIView *contentView;
@@ -41,12 +47,12 @@
     [super viewWillAppear:animated];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardShowing)
+                                             selector:@selector(keyboardWillShow)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardHidden)
+                                             selector:@selector(keyboardWillHide)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
 }
@@ -103,7 +109,7 @@
     }];
 
     // CollectionView
-    self.collArr = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"beauty"], nil];
+    self.collArr = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"beauty"],[UIImage imageNamed:@"beauty"], nil];
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
@@ -120,15 +126,16 @@
         make.height.equalTo(@70);
     }];
 
-
-
-
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(hideKeyboard:)];
+    tap.cancelsTouchesInView = NO;
+    [self.collectionView addGestureRecognizer:tap];
 }
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    NSLog(@"CollectionView中的Cell被点击了:%ld",(long)indexPath.row);
 }
 
 #pragma mark - UiCollectionViewDataSource
@@ -158,15 +165,17 @@
 }
 
 #pragma mark - 键盘处理事件
-- (void)keyboardShowing
+- (void)keyboardWillShow
 {
+    KeyBoardState = KeyboardShowing;
     CGRect frame = self.contentView.frame;
     frame.origin.y = self.contentView.frame.origin.y - 50;
     self.contentView.frame = frame;
 }
 
-- (void)keyboardHidden
+- (void)keyboardWillHide
 {
+    KeyBoardState = KeyboardHidden;
     CGRect frame = self.contentView.frame;
     frame.origin.y = self.contentView.frame.origin.y + 50;
     self.contentView.frame = frame;
@@ -176,6 +185,19 @@
 {
     [self.inputField endEditing:YES];
 }
+
+- (void)hideKeyboard:(id)sender
+{
+    CGPoint pointTouch = [sender locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pointTouch];
+    if (indexPath != nil && KeyBoardState == KeyboardShowing)
+    {
+        [self collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
+    }
+
+    [self.inputField endEditing:YES];// 这里会阻断响应链
+}
+
 
 @end
 

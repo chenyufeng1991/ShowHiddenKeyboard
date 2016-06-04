@@ -127,7 +127,7 @@ NS_ENUM(NSInteger,KeyBoardState){
     }];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                          action:@selector(hideKeyboard:)];
+                                                                          action:@selector(clickCollectionView:)];
 //    tap.cancelsTouchesInView = NO;
     [self.collectionView addGestureRecognizer:tap];
 }
@@ -149,7 +149,7 @@ NS_ENUM(NSInteger,KeyBoardState){
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
     cell.imageView.image = self.collArr[indexPath.row];
     [cell.button addTarget:self
-                    action:@selector(closeButton:)
+                    action:@selector(clickCloseButton:)
           forControlEvents:UIControlEventTouchUpInside];
 
 
@@ -186,10 +186,10 @@ NS_ENUM(NSInteger,KeyBoardState){
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self.inputField endEditing:YES];
+    [self hideKeyboard];
 }
 
-- (void)hideKeyboard:(id)sender
+- (void)clickCollectionView:(id)sender
 {
     CGPoint pointTouch = [sender locationInView:self.collectionView];
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pointTouch];
@@ -198,16 +198,29 @@ NS_ENUM(NSInteger,KeyBoardState){
         [self collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
     }
 
-    [self.inputField endEditing:YES];// 这里会阻断响应链
+    [self hideKeyboard];
 }
 
-- (void)closeButton:(id)sender
+- (void)clickCloseButton:(id)sender
 {
     CustomCollectionViewCell *cell = (CustomCollectionViewCell *)[sender superview];
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     NSLog(@"关闭按钮被点击：%ld",(long)indexPath.row);
 
-    [self hideKeyboard:nil];
+    [self hideKeyboard];
+
+    // 如果想要在点击关闭按钮的时候也调用didSelected方法，可以在这里手动调用;我先默认不调用；
+#if 0
+    if (indexPath != nil)
+    {
+        [self collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
+    }
+#endif
+}
+
+- (void)hideKeyboard
+{
+    [self.inputField endEditing:YES];// 这里会阻断响应链
 }
 
 

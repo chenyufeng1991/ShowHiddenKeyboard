@@ -1,29 +1,31 @@
 //
-//  ViewController.m
+//  ScrollViewController.m
 //  ShowHiddenKeyboard
 //
 //  Created by chenyufeng on 16/6/4.
 //  Copyright © 2016年 chenyufengweb. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "ScrollViewController.h"
 #import "Masonry.h"
 #import "CustomCollectionViewCell.h"
 #import "AppDelegate.h"
 
-@interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface ScrollViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) UIScrollView *contentView;
 @property (nonatomic, strong) UIImageView *topImageView;
 @property (nonatomic, strong) UITextField *inputField;
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UIImageView *bottomImageView;
 @property (nonatomic, strong) NSMutableArray *collArr;
 
 @property (nonatomic, assign) KeyBoardState status;
 
+
 @end
 
-@implementation MainViewController
+@implementation ScrollViewController
 
 - (void)viewDidLoad
 {
@@ -33,7 +35,7 @@
     [self configUI];
 
 
-    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -71,7 +73,7 @@
     CGRect tureFame = self.view.frame;
     tureFame.origin.y = 64;// 获取剔除导航栏后的真正y位置
 
-    self.contentView = [[UIView alloc] init];
+    self.contentView = [[UIScrollView alloc] init];
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.contentView.frame = tureFame;
     self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -122,8 +124,13 @@
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(clickCollectionView:)];
-//    tap.cancelsTouchesInView = NO;
+    //    tap.cancelsTouchesInView = NO;
     [self.collectionView addGestureRecognizer:tap];
+
+    // big  bottom image
+    self.bottomImageView = [[UIImageView alloc] init];
+    self.bottomImageView.image = [UIImage imageNamed:@"bottom"];
+
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -219,14 +226,3 @@
 
 
 @end
-
-
-
-
-
-
-
-
-
-
-

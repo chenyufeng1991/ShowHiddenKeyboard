@@ -16,15 +16,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efQ-7y-4NM">
-                    <rect key="frame" x="137" y="142" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="144" y="142" width="32" height="30"/>
+                    <state key="normal" title="view"/>
                     <connections>
                         <action selector="firstButtonClick:" destination="-1" eventType="touchUpInside" id="g0R-Ff-J7q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5K-De-xT5">
+                    <rect key="frame" x="142" y="269" width="37" height="30"/>
+                    <state key="normal" title="scroll"/>
+                    <connections>
+                        <action selector="scrollButtonClick:" destination="-1" eventType="touchUpInside" id="9NG-Zi-YrX"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="242" y="173"/>
         </view>
     </objects>
 </document>

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "MainViewController.h"
+#import "ScrollViewController.h"
 
 @interface LoginViewController ()
 
@@ -26,5 +27,13 @@
     MainViewController *vc = [[MainViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (IBAction)scrollButtonClick:(id)sender
+{
+    ScrollViewController *vc = [[ScrollViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+
 
 @end

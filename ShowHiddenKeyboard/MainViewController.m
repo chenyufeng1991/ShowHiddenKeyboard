@@ -103,7 +103,7 @@
     }];
 
     // CollectionView
-    self.collArr = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"beauty"],[UIImage imageNamed:@"beauty"], nil];
+    self.collArr = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"beauty"], nil];
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];

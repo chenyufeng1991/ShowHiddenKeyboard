@@ -203,10 +203,12 @@ UIScrollViewDelegate>
 }
 
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self hideKeyboard];
 }
+
 #pragma mark - 键盘处理事件
 - (void)keyboardWillShow
 {

@@ -19,12 +19,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowHiddenKeyboard/ScrollViewController.m"
-            timestampString = "486829297.309005"
+            filePath = "ShowHiddenKeyboard/MainViewController.m"
+            timestampString = "486827561.187042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
@@ -35,13 +35,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShowHiddenKeyboard/MainViewController.m"
-            timestampString = "486827561.187042"
+            filePath = "ShowHiddenKeyboard/ScrollViewController.m"
+            timestampString = "486831363.955582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "-touchesEnded:withEvent:"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-keyboardWillShow"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

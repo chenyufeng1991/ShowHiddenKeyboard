@@ -11,7 +11,11 @@
 #import "CustomCollectionViewCell.h"
 #import "AppDelegate.h"
 
-@interface ScrollViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface ScrollViewController ()<
+UICollectionViewDelegate,
+UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout,
+UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIView *contentView;
@@ -73,6 +77,8 @@
     self.scrollView.backgroundColor = [UIColor orangeColor];
     self.scrollView.scrollEnabled = YES;
     self.scrollView.userInteractionEnabled = YES;
+    self.scrollView.bounces = NO;
+    self.scrollView.delegate = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -89,8 +95,11 @@
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(weakSelf.scrollView);
         make.width.equalTo(weakSelf.scrollView);
-//        make.height.equalTo(@770);
     }];
+
+    UITapGestureRecognizer *tapView = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(hideKeyboard)];
+    [self.contentView addGestureRecognizer:tapView];
 
     // 顶部图片
     self.topImageView = [[UIImageView alloc] init];
@@ -193,6 +202,11 @@
     return UIEdgeInsetsMake(0, 5, 0, 5);
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self hideKeyboard];
+}
 #pragma mark - 键盘处理事件
 - (void)keyboardWillShow
 {

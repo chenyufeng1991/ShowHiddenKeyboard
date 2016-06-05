@@ -165,6 +165,63 @@
     return UIEdgeInsetsMake(0, 5, 0, 5);
 }
 
+#pragma mark - 键盘处理事件
+- (void)keyboardWillShow
+{
+    self.status = KeyboardShowing;
+    CGRect frame = self.contentView.frame;
+    frame.origin.y = self.contentView.frame.origin.y - 50;
+    self.contentView.frame = frame;
+}
+
+- (void)keyboardWillHide
+{
+    self.status = KeyboardHidden;
+    CGRect frame = self.contentView.frame;
+    frame.origin.y = self.contentView.frame.origin.y + 50;
+    self.contentView.frame = frame;
+}
+
+// 由于添加了scrollView，它会响应手势操作，所以导致不会调用touchesEnded方法
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self hideKeyboard];
+}
+
+- (void)clickCollectionView:(id)sender
+{
+    CGPoint pointTouch = [sender locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pointTouch];
+    if (indexPath != nil)
+    {
+        [self collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
+    }
+
+    [self hideKeyboard];
+}
+
+- (void)clickCloseButton:(id)sender
+{
+    CustomCollectionViewCell *cell = (CustomCollectionViewCell *)[sender superview];
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    NSLog(@"关闭按钮被点击：%ld",(long)indexPath.row);
+
+    [self hideKeyboard];
+
+    // 如果想要在点击关闭按钮的时候也调用didSelected方法，可以在这里手动调用;我先默认不调用；
+#if 0
+    if (indexPath != nil)
+    {
+        [self collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
+    }
+#endif
+}
+
+- (void)hideKeyboard
+{
+    [self.inputField endEditing:YES];// 这里会阻断响应链
+}
+
 
 
 @end
